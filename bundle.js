@@ -44,20 +44,37 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var image = __webpack_require__(1);
+	// src/index.js
+	var greet = __webpack_require__(1);   // Import the greet function
+	var image = __webpack_require__(2);
 
-	image.src("https://s3.amazonaws.com/media-p.slid.es/uploads/261398/images/1650407/2015-08-18_20_38_57.gif","#primero");
+
+
+	greet('Webpack');
+
+	image('http://placekitten.com/g/400/200');
 
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
 
-	//Elements/image.js
-	function src(src, id){
-		document.getElementById(id).innerHTML= "<img src='" + src + "' >";
+	// src/greet.js
+	function greet(who) {
+	    document.write('Hello ' + who + '!');
 	};
 
-	module.exports = image;
+	module.exports = greet;
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	function foto(src){
+		document.write('<img src=' + src + '>');
+		// document.getElementById("'+ id +'").innerHTML = '<img src=' + src + '>';
+	};
+
+	module.exports = foto;
 
 /***/ }
 /******/ ]);

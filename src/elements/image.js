@@ -1,6 +1,6 @@
-//Elements/image.js
-function src(src, id){
-	document.getElementById(id).innerHTML= "<img src='" + src + "' >";
+function foto(src){
+	document.write('<img src=' + src + '>');
+	// document.getElementById("'+ id +'").innerHTML = '<img src=' + src + '>';
 };
 
-module.exports = image;
+module.exports = foto;

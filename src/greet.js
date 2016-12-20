@@ -1,6 +1,6 @@
 // src/greet.js
 function greet(who) {
-    console.log('Hello ' + who + '!');
+    document.write('Hello ' + who + '!');
 };
 
 module.exports = greet;
